@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header a:hover{
+            background-color: white !important;
+            color: black !important;
+        }
+        .image-container {
+            width: 350px;
+            height: 380px;
+            background-image: url("WhatsApp Image 2023-10-07 at 1.50.59 AM.jpeg");
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            transition: background-image 0.3s;
+            border: 10px solid black;
+        }
+        .image-container:hover {
+        background-image: url("WhatsApp Image 2023-10-07 at 1.10.09 AM.jpeg");
+        }
+
+        .square-list {
+            list-style-type: square;
+        }
+
+        .disc-list{
+            list-style: disc;
+        }
+
+        dt{
+            font-size: large;
+            font-style: normal;
+        }
+    </style>
+    <title>My Portfolio</title>
+    <header>
+        <nav style="padding: 5px; margin: 5px; text-align: center;">
+        <h3>
+            <a href="#Home" style="padding: 20px; display: inline-block; color: white; background-color: black;">Home</a>
+            <a href="#About" style="padding: 20px; display: inline-block; color: white; background-color: black;">About Me</a>
+            <a href="#Resume" style="padding: 20px; display: inline-block; color: white; background-color: black;">My Resume</a>
+            <a href="#Portfolio" style= "padding:20px; display: inline-block; color: white; background-color: black;">My Portfolio</a>
+            <a href="#Contact" style="padding: 20px; display: inline-block; color: white; background-color: black;">Contact</a>
+        </h3>
+        </nav>
+    </header>
+
+    <section id="Home" style="text-align: center;">
+        <div class="image-container" style="display: block; margin-left: auto; margin-right: auto;">
+            <!-- <img width="350" height="380"> -->
+        </div>
+        <h1>Name: Haris Jamal</h1>
+        <p>Welcome to my portfolio website!</p>
+</section>
+
+
+    <section id="About">
+        <h1 style="text-align: center; padding-top: 10px;padding-bottom: 10px; background-color: black; color: white;">About</h1>
+    <dl style="padding-left: 10%;">
+        
+<h3><dt>Introduction</dt></h3>
+<dd><p>Hello there! I'm a web developer from Peshawar, Pakistan.</p></dd>
+            
+<dt><h3>Background</h3></dt>
+<dd>I am currently studying Computer Science at the University of Engineering & Technology Peshawar, Main Campus and am currently studying for an MSc in Software Engineering.
+                
+<dt><h3>Interests</h3></dt>
+    <ul class="square-list">
+    <dd><li>Web Development</li>
+    <li>App Development</li>
+    <li>Game Development</li>
+    <li>Video Editing</li>
+    <li>Reading Books</li>
+    </dd>
+    </ul>
+                    
+<dt><h3>Academic Journey</h3></dt>
+    <ul class="square-list">
+    <dd><li>Olevels (3 years)</li>
+        <li>Alevels (1 year)</li>
+        <li>FSC (2 years)</li>
+        <li>Bachelors in CS (Present)</li>
+    </dd>
+    </ul>
+
+<dt><h3>Key Skills</h3></dt>   
+<dd><ul class="square-list">
+                <li>Excellent Verbal and Written Communication Skills</li>
+                <li>Public Speaking Experience</li>
+                <li>Active Listener</li>
+                <li>Collaborative</li>
+                <li>Problem Solver</li>
+            </ul>
+        </dd>
+                
+                    
+    </dl>
+    </section>
+
+
+    <section id="Resume">
+        <h1 style=" text-align: center;  padding-top: 10px;padding-bottom: 10px; background-color: black; color: white;">My Resume</h1>
+        <dl style="padding-left: 10%;">
+            <dt><h3><u>Educational Background</u></h3></dt>
+                <dt><h3>Degrees</h3></dt>
+                <ul class="square-list">
+                    <li>GCE Olevels</li>
+                    <li>Federal Board DMC FSC</li>
+                    <li>Bachelors in Computer Science</li>
+                    </ul>
+
+                    <dt><h3>Institutions</h3></dt> 
+                    <ul class="square-list">
+                    <li>The City School Nowshera</li>
+                    <li>The City School Mardan</li>
+                    <li>APSACS Mardan</li>
+                    <li>UET Peshawar</li>
+                    </ul>
+                        <dt><h3><u>Graduation Dates</u></h3></dt>
+                            <ul class="disc-list">
+                                <dd>
+                                <i>Olevels</i></dd><br>
+                                <li>TCS Nowshera - 2015 to 2016</li>
+                                <li>TCS Mardan - 2016 to 2018</li>
+                                <br><dd><i>Alevels</i></dd><br>
+                                <li>TCS Nowshera - 2018 to 2019</li>
+                                <br><dd><i>FSC</i></dd><br>
+                                <li>APSACS Mardan - 2019 to 2021</li>
+                                <br><dd><i>Bachelors</i></dd><br>
+                                <li>TCS Nowshera - 2021 to Present</li>
+                            </ul>
+                            <dt><h3><u>Academic Achievements</u></h3></dt>
+                                <dt><h3>Skills</h3></dt>
+                                <ul>
+                                    <li>HTML5/CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>C++</li>
+                                    <li>Java</li>
+                                    <li>Android Studio</li>
+                                    <li>WordPress</li>
+                                </ul>
+        </dl>
+        <div style="text-align: left; padding: 20px; margin-left: 50px;">
+        <a href="MyResume.pdf" download><img src="download.png" height="40" width="40" alt="Download My Resume!" title="Download My Resume!" style="padding-right: 10px;"></a> <P style="inline-size: auto; display: inline-block;">Download my Resume!</P>
+        </div>
+    </section>
+
+
+
+    <section id="Portfolio">
+        <h1 style="text-align: center;padding-top: 10px;padding-bottom: 10px; background-color: black; color: white;">My Portfolio</h1>
+        <dl style="padding-left: 10%;">
+            <dt><h2>Project 1: Game Development</h2></dt>
+                <dt><h3><i><u>Project Title: TicTacToe</u></i></h3></dt>
+                    <dt><h3>Project Description:</h3></dt>
+                    <dd><i>A simple 2 player game with a leaderboard to keep track of players and a VsComputer mode still in development</i></dd>
+                        <dt><h3>Details:</h3></dt>
+                        <dd><i><b>Technology Used:</b> Android Studio, Java</i></dd>
+                            <dt><h3><u>Visual Elements:</u></h3></dt>
+                            <dd style="display: inline-block; margin-right: 20px; text-align: center;"><img src="mainscreen.jpeg" height="480" width="270" alt="Main" ></dd>
+                            <dd style="display: inline-block; margin-right: 20px; text-align: center;"><img src="game.jpeg" height="480" width="270" alt="GameScreen" ></dd>
+                            <dd style="display: inline-block; margin-right: 20px; text-align: center;"><img src="leaderboard.jpeg" height="480" width="270" alt="Leaderboard" ></dd>
+
+                        
+        </dl>
+    </section>
+
+
+    <section id="Contact">
+        <h1 style="text-align: center; padding-top: 10px;padding-bottom: 10px; background-color: black; color: white;">Contact Me</h1>
+        <h2 style="margin-left: 10%;">My Contact Information:</h2>
+        <div style="margin-left: 20%;">
+        <p class="contact" style="display: inline-block; margin-right: 30px;"><a href="mailto:hjkhan04@gmail.com" style="margin-left: 10%;"><img src="mail.png" height="70" width="70" alt="hjkhan04@gmail.com" title="hjkhan04@gmail.com" ></a>
+        <p class="contact" style="display: inline-block; margin-right: 20px;"><a href="https://www.linkedin.com/in/haris-jamal-16b873181/" target="_blank" style="margin-left: 10%;"><img src="linkedin.png" height="70" width="70" alt="LinkedIn" title="LinkedIn"></a>
+        <p class="contact" style="display: inline-block; margin-right: 20px;"><a href="https://www.fiverr.com/pe/yGv6AZ" target="_blank" style="margin-left: 10%;"><img src="fiverr.png" height="70" width="70" alt="Fiverr" title="Fiverr"></a>
+        <p class="contact" style="display: inline-block; margin-right: 20px;"><a href="https://www.upwork.com/freelancers/~018e02e53c112f8aa9" target="_blank" style="margin-left: 10%;"><img src="upwork.png" height="70" width="70" alt="Upwork" title="Upwork"></a>    
+        <p class="contact" style="display: inline-block;"><a href="https://github.com/HarisJamal28" target="_blank" style="margin-left: 10%;"><img src="github-mark.png" height="70" width="70"  alt="Github" title="Github"></a>    
+        </div>
+        <br>
+            <form style="margin-left: 10%;" action="/submit" method="post">
+            <!-- Name:<br><input type="text"><br>
+            Email Address:<br><input type="email"><br> -->
+            <!-- Subject:<br><input type="text"><br>
+            Message:<br><textarea ></textarea><br><br> -->
+            <label for="fulln">Full Name:</label><br>
+            <input type="text" name="FullName" id="fulln" required>
+            <br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="Email" id="email" required>
+            <br><br>
+            <label for="subject">Subject:</label><br>
+            <input type="text" name="Subject" id="subject" required>
+            <br><br>
+            <label for="msg">Message:</label><br>
+            <textarea type="text" name="Message" id="msg" rows="4" cols="50"></textarea>
+            <br><br>
+
+            <button type="submit" name="submit" id="submitButton">Submit</button>
+        </form>
+    </section>
+</html>
