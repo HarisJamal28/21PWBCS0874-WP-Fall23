@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ECommerce Book</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 50px;
+      background-color: darkred;
+    }
+
+    .navbar a{
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    
+     .jumbotron {
+      margin-bottom: 0;
+      background-color: rgb(3, 3, 3);
+      color: white;
+    }
+
+    .jumbotron h1{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+      font-size: 500%;
+      margin: 0;
+    }
+
+    .jumbotron p{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+   
+    footer {
+      background-color: darkred;
+      padding: 25px;
+    }
+
+    .container{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    body{
+      background-color: rgba(0, 0, 0, 0.934);
+    }
+
+    form input{
+        border-radius: 10px;
+        background-color: darkred;
+        color: white;
+        padding: 5px;
+    }
+
+    form textarea{
+        border-radius: 10px;
+        background-color: darkred;
+        padding: 5px;
+    }
+
+#myNavbar a:hover{
+  background-color: black !important;
+}
+
+#weborder{
+    color: white;
+    text-align: justify;
+}
+
+#aboutfoot a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+#aboutfoot a:hover{
+    color: white !important;
+    background-color: black !important;
+}
+
+#details p{
+    margin: 2%;
+    margin-left: 5%;
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>BookWorm International</h1>      
+    <p>Unlocking Knowledge, One Book at a Time</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/bookshelf.html"><img src="images/icon.png" alt="" height="30px" width="30px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Lead Titles</a></li>
+        <li><a href="index.html">Bestsellers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="listing1">
+<div class="container">
+<div class="row" style="border:none;height:fit-content;">
+    <div class="col-sm-6">
+        <img src="images/mario2.jpeg" style="margin-left: 10%;">
+    </div>
+    <div class="col-sm-6">  
+        <h3 style="color: white; font-size: 50px;">The Sicillian</h3>
+        <i class="fa-solid fa-star" style="color: #fdf62b;"></i>
+        <i class="fa-solid fa-star" style="color: #fdf62b;"></i>
+        <i class="fa-solid fa-star" style="color: #fdf62b;"></i>
+        <i class="fa-solid fa-star" style="color: #fdf62b;"></i>
+        
+        <br>
+        <i style="color: darkred;">The Godfather#2</i>
+        <p style="font-size:120%; color:white;">After Mario Puzo wrote his internationally acclaimed The Godfather, he has often been imitated but never equaled. Puzo's classic novel, The Sicilian, stands as a cornerstone of his work--a lushly romantic, unforgettable tale of bloodshed, justice, and treachery. . . .
+
+            The year is 1950. Michael Corleone is nearing the end of his exile in Sicily. The Godfather has commanded Michael to bring a young Sicilian bandit named Salvatore Giuliano back with him to America. But Giuliano is a man entwined in a bloody web of violence and vendettas. In Sicily, Giuliano is a modern day Robin Hood who has defied corruption--and defied the Cosa Nostra. Now, in the land of mist-shrouded mountains and ancient ruins, Michael Corleone's fate is entwined with the dangerous legend of Salvatore Giuliano: warrior, lover, and the ultimate Siciliano.
+        </p>
+        <div class="alert alert-success" style="width: fit-content;">Available</div>
+        <div class="label-danger"><h3 style="color: black; text-align: center;"><s>List Price  :   $3.00</s></h3></div>
+        <div class="label-warning"><h3 style="color: white; text-align: center;">Our Price  :   $1.50</h3></div>
+        <div class="label-success"><h3 style="color: white; text-align: center;">You Save    : $1.50 (50%)</h3></div>
+    
+<p style="color: darkred;">Payment Delivery Pre-payment {Credit Card [Visa & Master], Easy Paisa, Bank Transfer} Cash on Delivery Within 2-3 days on all pre-paid orders Within 7-10 days on all Cash on Delivery orders Next day delivery in Lahore on orders placed till 1 pm [working days only]
+</p>  
+<br><br>
+    </div>
+    <button type="button" class="btn btn-info btn-lg btn-danger"><a href="index.html" style="text-decoration: none; color: white;">Add To Wishlist</a></button> 
+    <button type="button" class="btn btn-success btn-lg btn-success"><a href="index.html" style="text-decoration: none; color: white;">Add To Cart</a></button> 
+</div>
+</div>
+</section>
+<br><br><br>
+
+<footer class="container-fluid text-center" style="color: white;">
+    <p>Copyright Haris Jamal </p> 
+    
+    <h6 style="color: white; text-align: left; display: inline-flex;">About Us:</h6>
+    <div id="aboutfoot" style="justify-content: space-evenly; display: flex;">
+    <a href="index.html" style="width: 100px; height: fit-content; padding: 5px; background-color: red;">Home</a>
+    <a href="index.html" style="width: 100px; height: fit-content; padding: 5px; background-color: red;">Lead Titles</a>
+    <a href="index.html" style="width: 100px; height: fit-content; padding: 5px; background-color: red;">Bestsellers</a>
+    <a href="contact.html" style="width: 100px; height: fit-content; padding: 5px; background-color: red;">Contact</a>
+  </div>
+  </footer>
+</body>
+</html>

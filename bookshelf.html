@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ECommerce Book</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 50px;
+      background-color: darkred;
+    }
+
+    .navbar a{
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    
+     .jumbotron {
+      margin-bottom: 0;
+      background-color: rgb(3, 3, 3);
+      color: white;
+    }
+
+    .jumbotron h1{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+      font-size: 500%;
+      margin: 0;
+    }
+
+    .jumbotron p{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+   
+    footer {
+      background-color: darkred;
+      padding: 25px;
+    }
+
+    .container{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    body{
+      background-color: rgba(0, 0, 0, 0.934);
+    }
+
+    form input{
+        border-radius: 10px;
+        background-color: darkred;
+        color: white;
+        padding: 5px;
+    }
+
+    form textarea{
+        border-radius: 10px;
+        background-color: darkred;
+        padding: 5px;
+    }
+
+#myNavbar a:hover{
+  background-color: black !important;
+}
+
+#weborder{
+    color: white;
+    text-align: justify;
+}
+
+#aboutfoot a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>BookWorm International</h1>      
+    <p>Unlocking Knowledge, One Book at a Time</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/icon.png" alt="" height="30px" width="30px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Lead Titles</a></li>
+        <li><a href="index.html">Bestsellers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1 style="text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 1px; color: white;">Preferred Choices</h1>
+<div class="container text-center" id="best-list">    
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/secbook8.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$3.00</i>
+        
+        
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/secbook9.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$2.49</i>
+        
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/secbook10.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$6.99</i>
+        
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/sec1.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$3.99</i>
+        
+      </div> 
+      <div class="col-sm-2"> 
+        <img src="images/sec2.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$6.00</i>
+        
+      </div>     
+      <div class="col-sm-2"> 
+        <img src="images/sec3.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$1.99</i>
+        
+      </div> 
+    </div>
+  </div>
+  <br><br>
+  <div class="container text-center" id="best-list">    
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/secbook1.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$3.00</i>
+        
+        
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/secbook2.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$2.49</i>
+         
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/secbook3.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$6.99</i>
+        
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/secbook4.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$3.99</i>
+        
+      </div> 
+      <div class="col-sm-2"> 
+        <img src="images/secbook5.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$6.00</i>
+        
+      </div>     
+      <div class="col-sm-2"> 
+        <img src="images/secbook6.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <i>$1.99</i>
+        
+      </div> 
+    </div>
+  </div>
+
+
+</body>
+</html>
