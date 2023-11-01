@@ -1,0 +1,232 @@
+$phoneFontSize:12px;
+$deskFontSize:16px;
+$buttonColor:#0ccd13;
+$colorscheme:black;
+$logomain:url(../images/cafe_logo_2.png);//custom logo choice
+$logonav:url(../images/cafe_logo.png);
+
+
+
+
+
+.header {
+  text-align: center;
+  img {
+    width: 50%;
+  }
+}
+
+.navbar{
+  background-color: $colorscheme;
+}
+
+#contact{
+  background-color: $colorscheme;
+}
+
+
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+  .nav-item {
+    margin: 0 10px;
+    list-style: none;
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 25px;
+      &:hover {
+        text-shadow: 2px 2px 2px white;
+      }
+    }
+  }
+}
+
+.carousel-inner {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#home {
+  text-align: center;
+}
+
+#menu {
+  text-align: center;
+}
+
+.card {
+  box-shadow: 10px 10px 10px black;
+  .card-footer {
+    color: black;
+    background-color: white;
+  }
+}
+
+#menuselection{
+    .card{
+        background-color: white;
+        color: black;
+
+        .card-header{
+            font-weight: bold;
+            background-color: white;
+        }
+
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+
+#employees {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  #cafelogo {
+    width: 40px;
+  }
+
+  #Aboutcontents{
+    width: fit-content;
+  }
+
+  input{
+    width: fit-content;
+  }
+}
+
+// Mobile Look
+@media only screen and (max-width: 400px) {
+  
+  #cafelogo {
+    width: 25px;
+  }
+
+  td{
+    font-size: $phoneFontSize;
+    padding: 5px;
+  }
+
+
+  #words {
+    font-size: $phoneFontSize;
+    text-align: justify;
+  }
+  #words2 {
+    font-size: $phoneFontSize;
+    text-align: center;
+  }
+  #staff {
+    img {
+      width: 100%;
+    }
+  }
+
+  #names {
+    font-size: 16px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+    .nav-item {
+      margin: 0 10px;
+      list-style: none;
+
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card {
+    width: 225px;
+  }
+}
+
+#proper {
+  font-size: 55%;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+@mixin buttonlook {
+  background-color: $buttonColor;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 90px;
+  margin-top: 20px;
+  
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.price {
+  @include buttonlook();
+}
+
+#listcards {
+  li {
+    list-style: none;
+    text-align: justify;
+  }
+}
+
+#footer{
+    text-align: center;
+    background-color: $colorscheme;
+    color: white;
+}
+
+#menulistbutton{
+    background-color: $colorscheme;
+    font-size: large;
+    .dropdown-menu{
+        #menu1{
+            background-color: white;
+        }
+        #menu2{
+            background-color: white;
+        }
+        #menu3{
+            background-color: white;
+        }
+    }
+}
