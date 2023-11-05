@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="sass.css">
+</head>
+<body>
+    <header class="fixed-top">
+    <h1 class="display-1">OLMS</h1>
+    </header>
+    <br><br><br>
+    <div id="extra"><br><br><br></div>
+
+    <section class="container">
+        <div class="row">
+            <section class="col" id="col1">
+                <h2>Book List</h2>
+                <div><ol id="booklist"><li id="Hackers">Hacking: The Art of Exploitation by Jon Erickson ISBN: 978-1593271442</li>
+                <li>Introduction to the Theory of Computation by Michael Sipser ISBN: 978-1133187790</li>
+            <li>Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke ISBN: 978-1593279509</li></ol></div>
+            </section>
+            <section class="col">
+                <h2>Add New Book</h2>
+                <div>
+                    <form>
+                        <div class="mb-3 mt-3">
+                            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+                            <br>
+                            <input type="text" class="form-control" id="author" placeholder="Author" name="author">
+                            <br>
+                            <input type="number" class="form-control" id="isbn" placeholder="ISBN" name="isbn">
+                        </div>
+                    </form>
+                    <button class="btn btn-primary" onclick="Add()">Add Book</button>
+                    <button class="btn btn-primary m-3" onclick="Dummy()" id="dummybutt"><i class="fa-solid fa-shuffle fa-lg" style="color: #ffffff;"></i></button>
+                </div>
+            </section>
+            <section class="col">
+                <h2>Search for Books</h2>
+                <div><form>
+                    <div class="mb-3 mt-3">
+                        <input type="text" class="form-control" id="titlesearch" placeholder="Title" name="title">
+                       </div>
+                </form>
+                <button class="btn btn-primary"  onclick="Search()">Search</button>
+                <BR></BR>
+                <p id="result"></p>
+            </div>
+                
+            </section>
+        </div>
+    </section>
+
+
+    <script>
+  function Add(){
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
+    const isbnInput = document.getElementById('isbn');
+    const booklist = document.getElementById('booklist');
+
+    const title = titleInput.value.trim();
+    const author = authorInput.value.trim();
+    const isbn = isbnInput.value.trim();
+
+    if(title==''||author==''||isbn==''){
+        alert("Please fill all fields");
+        return;
+    }
+
+
+    const existingEntries = booklist.getElementsByTagName('li');
+    for (const entry of existingEntries) {
+        const entryText = entry.textContent;
+        if (entryText.includes(title) && entryText.includes(author) && entryText.includes(isbn)) {
+            alert("This entry already exists in the list.");
+            return;
+        }
+    }
+
+
+    const newadditions = document.createElement('li');
+    newadditions.innerHTML = `${title} by ${author} ISBN: ${isbn}`;
+    booklist.appendChild(newadditions);
+
+    titleInput.value='';
+    authorInput.value='';
+    isbnInput.value='';
+  }
+
+  function Dummy(){
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
+    const isbnInput = document.getElementById('isbn');
+    const booklist = document.getElementById('booklist');
+
+    const title = titleInput.value.trim();
+    const author = authorInput.value.trim();
+    const isbn = isbnInput.value.trim();
+
+    const existingEntries = booklist.getElementsByTagName('li');
+
+    const newadditions = document.createElement('li');
+    newadditions.innerHTML = `${title} by ${author} ISBN: ${isbn}`;
+    booklist.appendChild(newadditions);
+
+    titleInput.value='';
+    authorInput.value='';
+    isbnInput.value='';
+  }
+
+  function Search(){
+    const booklist = document.getElementById('booklist');
+    const titlename = document.getElementById('titlesearch');
+    const result = document.getElementById('result');
+
+    const titleToSearch = titlename.value.toLowerCase();
+
+    if(titleToSearch==''){
+        alert("Please fill all fields");
+        return;
+    }
+
+
+    let foundItem = null;
+    for (let i = 0; i < booklist.children.length; i++) {
+        const listitem = booklist.children[i];
+        listitem.style.backgroundColor = '';
+    }
+
+    
+    const wordRegex = new RegExp('\\b' + titleToSearch + '\\b', 'i');
+
+    
+    for (let i = 0; i < booklist.children.length; i++) {
+        const listitem = booklist.children[i];
+        const text = listitem.textContent.toLowerCase();
+
+        if (wordRegex.test(text)) {
+            foundItem = listitem;
+            listitem.style.backgroundColor = 'blue';
+            listitem.style.color = 'black';
+            break;
+        }
+    }
+
+    result.textContent = '';
+
+    if (foundItem) {
+        result.textContent = foundItem.textContent;
+    } else {
+        result.textContent = 'Not Found';
+    }
+  }
+    </script>
+
+    <br><br><br>
+
+    <footer class="bg-primary p-3 fixed-bottom">
+        
+    </footer>
+</body>
+</html>
