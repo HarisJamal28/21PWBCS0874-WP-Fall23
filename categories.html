@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="javascript" href="script.js">
+    <title>Book Categories</title>
+</head>
+<body style="background-color: #6FA3EF;">
+
+        <nav class="navbar navbar-expand-sm navbar-dark" id="top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#"><i class="fa fa-book" aria-hidden="true"> BookSellers</i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon light"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="index.html"> <i class="fa fa-university m-3" aria-hidden="true" ></i>Home</a></li>
+                        <li class="nav-item dropdown" id="categoriesDropdown">
+                            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-list-check m-3" aria-hidden="true"></i>Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="categoriesList">
+                              <li><a class="dropdown-item" href="#" data-category="Fiction">Fiction</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Dystopian">Dystopian</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Classic">Classic</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Science Fiction">Science Fiction</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Fantasy">Fantasy</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Mystery">Mystery</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Historical Fiction">Historical Fiction</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Gothic">Gothic</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Horror">Horror</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Philosophical">Philosophical</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Contemporary">Contemporary</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Autobiographical">Autobiographical</a></li>
+                              <li><a class="dropdown-item" href="#" data-category="Adventure">Adventure</a></li>
+                            </ul>
+                        </li>                      
+                        <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="cart.html"> <i class="fa fa-cart-plus m-3" aria-hidden="true"></i>Cart</a>       </li>                 
+                        <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="contact.html"> <i class="fa fa-phone m-3" aria-hidden="true"></i>Contact</a>        </li>                
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container" id="bookContainer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const categoriesDropdown = document.getElementById('categoriesDropdown');
+        const categoriesList = document.getElementById('categoriesList');
+
+        categoriesList.addEventListener('click', function (event) {
+            if (event.target.tagName === 'A') {
+                const selectedCategory = event.target.getAttribute('data-category');
+
+                fetch('books.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const filteredBooks = data.filter(book => book.category === selectedCategory);
+                        displayBooks(filteredBooks);
+                    });
+            }
+        });
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => displayBooks(data));
+    });
+
+    function displayBooks(books) {
+        const bookContainer = document.getElementById('bookContainer');
+        bookContainer.style.display = 'flex';
+        bookContainer.style.flexDirection = 'row';
+        bookContainer.style.justifyContent = 'space-evenly';
+        bookContainer.style.flexWrap = 'wrap';
+        bookContainer.innerHTML = '';
+
+        books.forEach(book => {
+
+            const card = document.createElement('div');
+            card.classList.add('card', 'mb-3');
+            card.style.backgroundColor = '#6FA3EF';
+            card.style.width = 'fit-content';
+
+            const img = document.createElement('img');
+            img.classList.add('card-img-top');
+            img.src = book.cover_image;
+            img.alt = `${book.title} Cover`;
+            img.style.height = 'auto';
+            img.style.width = '18rem';
+
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+            cardBody.id = 'bookbodycard';
+            cardBody.style.backgroundColor = '#004080';
+
+            const title = document.createElement('h5');
+            title.classList.add('card-title');
+            title.textContent = book.title;
+            title.style.color = 'white';
+            title.style.textAlign = 'center';
+            title.style.backgroundColor = '#6FA3EF';
+            title.style.padding = '5px';
+
+            const author = document.createElement('p');
+            author.classList.add('card-text');
+            author.textContent = `Author: ${book.author}`;
+            author.style.color = 'white';
+
+            const price = document.createElement('p');
+            price.classList.add('card-text');
+            price.textContent = `Price: $${book.price.toFixed(2)}`;
+            price.style.color = 'white';
+
+            const addToCartButton = document.createElement('button');
+            addToCartButton.classList.add('btn', 'mr-2');
+            addToCartButton.setAttribute('style', 'background-color: #FFD700');
+            addToCartButton.textContent = 'Add to Cart';
+            addToCartButton.style.color = 'white';
+            addToCartButton.style.margin = '10px';
+
+            const viewCartButton = document.createElement('button');
+            viewCartButton.classList.add('btn', 'btn-secondary');
+            viewCartButton.textContent = 'View Cart';
+
+            addToCartButton.addEventListener('click', () => addToCart(book));
+            viewCartButton.addEventListener('click', () => viewCart());
+
+            cardBody.appendChild(title);
+            cardBody.appendChild(author);
+            cardBody.appendChild(price);
+            cardBody.appendChild(addToCartButton);
+            cardBody.appendChild(viewCartButton);
+
+            addToCartButton.addEventListener('click', function () {
+            changeColorAndRevert(addToCartButton);
+        });
+
+            card.appendChild(img);
+            card.appendChild(cardBody);
+
+            bookContainer.appendChild(card);
+        });
+
+        function changeColorAndRevert(button) {
+        button.style.backgroundColor = '#001F3F';
+        setTimeout(function () {
+            button.style.backgroundColor = '#FFD700';
+        }, 1000);
+    }
+    }
+    function addToCart(book) {
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        cartItems.push(book);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+    function viewCart() {
+        window.location.href = 'cart.html';
+    }
+</script>
+
+
+</body>
+</html>

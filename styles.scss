@@ -1,0 +1,146 @@
+body{
+    background-color: #6FA3EF;
+}
+
+nav{
+    background-color: #004080;
+}
+
+.nav-link{
+    &:hover{
+        filter: drop-shadow(3px 0px 1px #6FA3EF);
+    }
+}
+
+#bookholder{
+    color: #004080;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+#bookholder{
+    box-shadow: 10px 10px 20px;
+}
+
+footer{
+    background-color: #004080;
+    color: white;
+    font-size: small;
+}
+
+.carousel-item img{
+    width: 30%;
+    border-radius: 30px;
+    opacity: 0.6;
+    filter: blur(2px);
+}
+
+.carousel-caption{
+    font-size: larger;
+    height: fit-content;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-caption p{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.mySlides {
+    display:none
+}
+
+
+#left-contact{
+    background-color: #004080;
+    height: fit-content;
+}
+#info{
+    background-color: #007BFF;
+    .flex-row{
+        margin-top: 2%;
+    }
+
+    p{
+        color: #004080;
+        font-weight: bolder;
+    }
+
+    i{
+        color: #004080;
+        margin: 2%;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    a{
+        text-decoration: none;
+        color: #004080;
+        font-weight: bold;
+    }
+
+    .form-label{
+        label{font-weight: bold;
+        color: #004080;
+        }
+    }
+}
+    
+
+@media only screen and (max-width:350px){
+    #bookbanner{
+        overflow-y: scroll;
+    }
+    #bookholder{
+        height:fit-content;
+        box-shadow: 0px 0px 0px;
+    }
+    .carousel-caption{
+        position: relative;
+        font-size: small;
+        padding: 2%;
+    }
+}
+
+@media only screen and (min-width:700px){
+    .carousel-item img{
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width:800px){
+    .carousel-item img{
+        width: 20%;
+    }
+
+    #bookbanner{
+        overflow-y: hidden;
+    }
+}
+
+
+#bookbodycard{
+    background-color: #6FA3EF;
+}
+
+.card img{
+    height: 50%;
+}
+
+.dropdown-menu{
+    background-color: #004080;
+    a{
+        background-color: #0155aa;
+    color: white;
+    }
+}
+
+th{
+    background-color: #004080;
+}
